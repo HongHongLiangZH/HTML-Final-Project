@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+<!-------------------------------------------------------------頂部欄------------------------------------------------------------>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo truncate">國立中興大學實習商店 NCHU MART</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="about.html">關於我們</a></li>
+                    <li><a href="goods.html">商品類別</a></li>
+                    <li><a href="https://www2.nchu.edu.tw/news-detail/id/44647" target="_blank">學生實習</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="about.html">關於我們</a></li>
+        <li><a href="goods.html">商品類別</a></li>
+        <li><a href="work.html">學生實習</a></li>
+    </ul>
+<!-------------------------------------------------------------商品識別標題------------------------------------------------------------>
+    <div class="container">
+        <h1 class="center-align"><b>商品類別</b></h1>
+<!-------------------------------------------------------------商品分類按鈕------------------------------------------------------------>
+        <div class="section">
+            <div class="row">
+                <div class="col s6 m4 l3 xl2">
+                    <div class="center-align">
+                        <a class="waves-effect waves-light btn-large" onclick="init('所有商品')">所有商品</a>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3 xl2">
+                    <div class="center-align">
+                        <a class="waves-effect waves-light btn-large" onclick="init('NCHU Café')">NCHU Café</a>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3 xl2">
+                    <div class="center-align">
+                        <a class="waves-effect waves-light btn-large" onclick="init('興大精品館')">興大精品館</a>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3 xl2">
+                    <div class="center-align">
+                        <a class="waves-effect waves-light btn-large" onclick="init('實驗林管理處')">實驗林管理處</a>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3 xl2">
+                    <div class="center-align">
+                        <a class="waves-effect waves-light btn-large" onclick="init('園藝試驗場')">園藝試驗場</a>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3 xl2">
+                    <div class="center-align">
+                        <a class="waves-effect waves-light btn-large" onclick="init('農業試驗場')">農業試驗場</a>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3 xl2">
+                    <div class="center-align">
+                        <a class="waves-effect waves-light btn-large" onclick="init('畜產試驗場')">畜產試驗場</a>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3 xl2">
+                    <div class="center-align">
+                        <a class="waves-effect waves-light btn-large" onclick="init('興大實習工廠')">興大實習工廠</a>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3 xl2">
+                    <div class="center-align">
+                        <a class="waves-effect waves-light btn-large" onclick="init('興大技術授權')">興大技術授權</a>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3 xl2">
+                    <div class="center-align">
+                        <a class="waves-effect waves-light btn-large" onclick="init('興大產學合作')">興大產學合作</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+<!-------------------------------------------------------------商品顯示------------------------------------------------------------>
+        <br>
+        <div id="goods">
+        </div>
+    </div>
+<!-------------------------------------------------------------breadcrumb------------------------------------------------------------>
+    <nav>
+        <div class="nav-wrapper yellow indigo-text text-darken-4">
+            <div class="container indigo-text text-darken-4">
+                <div class="col s12">
+                    <a href="index.html" class="breadcrumb indigo-text text-darken-4">首頁</a>
+                    <a href="goods.html" class="breadcrumb indigo-text text-darken-4">商品類別</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-----------------------------------------------------------------footer-------------------------------------------------------------->
+    <footer class="page-footer">
+        <div class="container"  style="padding-top: 30px;padding-bottom: 40px;">
+            <div class="row">
+                <div class="col s12">
+                    <h5 class="white-text">國立中興大學農業暨自然資源學院實習商店&nbspNCHU MART</h5>
+                    <p class="grey-text text-lighten-4">40227台中市南區興大路145號實習商店</p>
+                    <a href="https://www.google.com/maps/dir//24.1215314,120.6790303/@24.121531,120.67903,20z?hl=zh-TW" class="waves-effect waves-light btn yellow indigo-text text-darken-4" target="_blank">開始導航</a>
+                    <br>
+                    <br><br>
+                </div>
+                <div class="col l4 s12">
+                    <h5 class="white-text">與我們聯絡</h5>
+                    <ul>
+                        <li>電子郵件：</li>
+                        <li><a href="mailto:nchu-mart@nchu.edu.tw" class="yellow-text">nchu-mart@nchu.edu.tw</a></li>
+                        <li></li>
+                        <li>電話：</li>
+                        <li><a href="tel:+88622840706" class="yellow-text"> (04)2284-0706</a></li>
+                        <li><a href="tel:+88622854821" class="yellow-text"> (04)2285-4821</a></li>
+                    </ul>
+                    <br>
+                    <h5 class="white-text">鏈結</h5>
+                    <ul>
+                        <li><a class="white-text" href="https://www.facebook.com/NCHU.Mart/" target="_blank">實習商店Facebook</a></li>
+                        <li><a class="white-text" href="https://www.nchu.edu.tw/index" target="_blank">國立中興大學</a></li>
+                        <li><a class="white-text" href="http://canr.nchu.edu.tw/" target="_blank">農業暨自然資源學院</a></li>
+                    </ul>
+                </div>
+                <div class="col offset-l2 l6 s12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d455.1787560114668!2d120.67903000000001!3d24.121531!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x282f9bd465a40006!2z5Lit6IiI5aSn5a245a-m57-S5ZWG5bqX!5e0!3m2!1szh-TW!2stw!4v1578424704732!5m2!1szh-TW!2stw" width="100%" height="400px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright yellow indigo-text text-darken-4">
+            <div style="margin: 0 auto; width: 90%">
+                © 2020 Hong96_photography Copyright
+                <a class="white-text right indigo-text text-darken-4" href="https://www.instagram.com/hong96_photography/" target="_blank">instagram</a>
+            </div>
+        </div>
+    </footer>
+    <!----------------------------------------------JavaScript at end of body for optimized loading----------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script src="https://materializecss.com/js/modal.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!--script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script-->
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!--script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script-->
+    <!-- 利用Tabletop.JS讀取Google Sheet https://github.com/jsoma/tabletop -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script type='text/javascript'>
+    var elem = document.querySelector('.sidenav');
+    var instance = new M.Sidenav(elem);
+
+    var Goodsformurl = "https://docs.google.com/spreadsheets/d/1udKjMhLQ44XdAfBHVNRPEGyCqAlQdu71L4ix5T4buTI/edit#gid=1168387996";
+    var str = "";
+
+    function init(donum) {
+        if (donum == "所有商品") {
+            Tabletop.init({
+                key: Goodsformurl,
+                callback: all_goods,
+                simpleSheet: true
+            })
+        } else if (donum == "NCHU Café") {
+            Tabletop.init({
+                key: Goodsformurl,
+                callback: NCHU_Cafe_goods,
+                simpleSheet: true
+            })
+        } else if (donum == "興大精品館") {
+            Tabletop.init({
+                key: Goodsformurl,
+                callback: xingdajingpinguan_goods,
+                simpleSheet: true
+            })
+        } else if (donum == "實驗林管理處") {
+            Tabletop.init({
+                key: Goodsformurl,
+                callback: shiyanshilingguanchu_goods,
+                simpleSheet: true
+            })
+        } else if (donum == "園藝試驗場") {
+            Tabletop.init({
+                key: Goodsformurl,
+                callback: yuanyishiyanchang_goods,
+                simpleSheet: true
+            })
+        } else if (donum == "農業試驗場") {
+            Tabletop.init({
+                key: Goodsformurl,
+                callback: nongyeshiyanchang_goods,
+                simpleSheet: true
+            })
+        } else if (donum == "畜產試驗場") {
+            Tabletop.init({
+                key: Goodsformurl,
+                callback: xuchanshiyanchang_goods,
+                simpleSheet: true
+            })
+        } else if (donum == "興大實習工廠") {
+            Tabletop.init({
+                key: Goodsformurl,
+                callback: xingdashixigongchang_goods,
+                simpleSheet: true
+            })
+        } else if (donum == "興大技術授權") {
+            Tabletop.init({
+                key: Goodsformurl,
+                callback: xingdajishushouquan_goods,
+                simpleSheet: true
+            })
+        } else if (donum == "興大產學合作") {
+            Tabletop.init({
+                key: Goodsformurl,
+                callback: xingdachanxuehezuo_goods,
+                simpleSheet: true
+            })
+        } else {
+            Tabletop.init({
+                key: Goodsformurl,
+                callback: all_goods,
+                simpleSheet: true
+            })
+        }
+
+    }
+
+    function showInfo(data, tabletop) {
+        //alert('Successfully processed!')
+        console.log(data);
+        all_goods(data, tabletop);
+    }
+    /*// Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAIndOCwbxRDYDyiUSiB5F0Jbs8Gzwl8_Y",
+      authDomain: "finalproject-cf2ed.firebaseapp.com",
+      databaseURL: "https://finalproject-cf2ed.firebaseio.com",
+      projectId: "finalproject-cf2ed",
+      storageBucket: "finalproject-cf2ed.appspot.com",
+      messagingSenderId: "270214232554",
+      appId: "1:270214232554:web:e0b8002b6065a014645a93",
+      measurementId: "G-KDYH1QHBEV"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();*/
+
+    window.addEventListener('DOMContentLoaded', init("all_goods"));
+
+    function NCHU_Cafe_goods(data, tabletop) {
+        str = '<div class="row">';
+        for (var i = data.length - 1; i >= 0; i--) {
+            if (data[i].Types == "NCHU Café") {
+                printdata(data, tabletop, i);
+            }
+        }
+        str += '</div>';
+        document.getElementById("goods").innerHTML = str;
+        //alert(str);
+    }
+
+    function all_goods(data, tabletop) {
+        //alert("Go!");
+        console.log(data);
+        str = '<div class="row">';
+        for (var i = data.length - 1; i >= 0; i--) {
+            printdata(data, tabletop, i);
+        }
+        str += '</div>';
+        document.getElementById("goods").innerHTML = str;
+        //alert(str);
+    }
+
+    function xingdajingpinguan_goods(data, tabletop) {
+        str = '<div class="row">';
+        for (var i = data.length - 1; i >= 0; i--) {
+            if (data[i].Types == "興大精品館") {
+                printdata(data, tabletop, i);
+            }
+        }
+        str += '</div>';
+        document.getElementById("goods").innerHTML = str;
+        //alert(str);
+    }
+
+    function shiyanshilingguanchu_goods(data, tabletop) {
+        str = '<div class="row">';
+        for (var i = data.length - 1; i >= 0; i--) {
+            if (data[i].Types == "實驗林管理處") {
+                printdata(data, tabletop, i);
+            }
+        }
+        str += '</div>';
+        document.getElementById("goods").innerHTML = str;
+        //alert(str);
+    }
+
+    function yuanyishiyanchang_goods(data, tabletop) {
+        str = '<div class="row">';
+        for (var i = data.length - 1; i >= 0; i--) {
+            if (data[i].Types == "園藝試驗場") {
+                printdata(data, tabletop, i);
+            }
+        }
+        str += '</div>';
+        document.getElementById("goods").innerHTML = str;
+        //alert(str);
+    }
+
+    function nongyeshiyanchang_goods(data, tabletop) {
+        str = '<div class="row">';
+        for (var i = data.length - 1; i >= 0; i--) {
+            if (data[i].Types == "農業試驗場") {
+                printdata(data, tabletop, i);
+            }
+        }
+        str += '</div>';
+        document.getElementById("goods").innerHTML = str;
+        //alert(str);
+    }
+
+    function xuchanshiyanchang_goods(data, tabletop) {
+        str = '<div class="row">';
+        for (var i = data.length - 1; i >= 0; i--) {
+            if (data[i].Types == "畜產試驗場") {
+                printdata(data, tabletop, i);
+            }
+        }
+        str += '</div>';
+        document.getElementById("goods").innerHTML = str;
+        //alert(str);
+    }
+
+    function xingdashixigongchang_goods(data, tabletop) {
+        str = '<div class="row">';
+        for (var i = data.length - 1; i >= 0; i--) {
+            if (data[i].Types == "興大實習工廠") {
+                printdata(data, tabletop, i);
+            }
+        }
+        str += '</div>';
+        document.getElementById("goods").innerHTML = str;
+        //alert(str);
+    }
+
+    function xingdajishushouquan_goods(data, tabletop) {
+        str = '<div class="row">';
+        for (var i = data.length - 1; i >= 0; i--) {
+            if (data[i].Types == "興大技術授權") {
+                printdata(data, tabletop, i);
+            }
+        }
+        str += '</div>';
+        document.getElementById("goods").innerHTML = str;
+        //alert(str);
+    }
+
+    function xingdachanxuehezuo_goods(data, tabletop) {
+        str = '<div class="row">';
+        for (var i = data.length - 1; i >= 0; i--) {
+            if (data[i].Types == "興大產學合作") {
+                printdata(data, tabletop, i);
+            }
+        }
+        str += '</div>';
+        document.getElementById("goods").innerHTML = str;
+        //alert(str);
+    }
+
+    function printdata(data, tabletop, num) {
+        str +=
+            '<div class="col s12 m6 xl4">' +
+            '<div class="card large sticky-action hoverable">' +
+            '<div class="card-image waves-effect waves-block waves-light">' +
+            '<img class="activator" src="' + data[num].Picture_1_ID + '">' +
+            '</div>' +
+            '<div class="card-content">' +
+            '<span class="card-title activator">' + data[num].Name + '</span>' +
+            '</div>' +
+            '<div class="card-action">' +
+            '<h4>NT$ ' + data[num].Price + '</h4>' +
+            //'<a href="#"><h4>NT$ '+data[num].Price+'</h4></a>'+
+            '</div>' +
+            '<div class="card-reveal">' +
+            '<span class="card-title grey-text text-darken-4">' + data[num].Name + '<i class="material-icons right">close</i></span>' +
+            '<p>' + data[num].Info + '<br><br><br><br><br></p>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+    }
+    </script>
+</body>
+
+</html>
