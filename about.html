@@ -222,10 +222,13 @@
     var str = "";
 
     function init() {
-        Tabletop.init({
-            key: Goodsformurl,
-            callback: all_photos,
-            simpleSheet: true
+         Papa.parse(Goodsformurl,{
+            download: true,
+              header: true,
+              complete: function(results) {
+                var data = results.data
+                console.log(data)
+              }
         })
     }
 
